@@ -1,0 +1,800 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <meta name="theme-color" content="#0d88c5" />
+    <title>JWU Hohenau-Schönbrunn am Lusen | Junge Wähler Union</title>
+    <meta itemprop="name" content="JWU Hohenau-Schönbrunn am Lusen | Junge Wähler Union">
+    <meta name="description" content="Die Junge Wähler Union Hohenau-Schönbrunn am Lusen ist eine 2001 gegründete politische Jugendorganisation in der Gemeinde Hohenau. Die JWU setzt sich für die Interessen der Gemeindebürger ein will als Ideen- und Impulsgeber aktiv an der Gestaltung unserer Heimat mitarbeiten.">
+    <meta itemprop="description" content="Die Junge Wähler Union Hohenau-Schönbrunn am Lusen ist eine 2001 gegründete politische Jugendorganisation in der Gemeinde Hohenau. Die JWU setzt sich für die Interessen der Gemeindebürger ein will als Ideen- und Impulsgeber aktiv an der Gestaltung unserer Heimat mitarbeiten.">
+    <meta name="keywords" content="Junge Wähler Union, JWU Hohenau, JWU Schönbrunn am Lusen, Junge Wähler Union, JWU FRG, JWU Freyung-Grafenau">
+    <meta property="og:image" content="https://jwu-hohenau.de/images/jwu_hohenau.png">
+    
+    <link rel="shortcut icon" href="https://www.jwu-frg.de/favicon.ico" />
+    <link rel="icon" href="https://www.jwu-frg.de/favicon.ico"/>
+    <meta name="robots" content="index">
+    <link rel="stylesheet" href="css/pure-min.css">    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="grid-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/grid.css">
+        <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://icono-49d6.kxcdn.com/icono.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+<script>
+    function handleChange(checkbox) {
+    if(checkbox.checked == true){
+        document.getElementById("page-canvas").classList.add("active-menu");
+        document.getElementById("menu").classList.add("active-menu");
+        $("#logo img").hide();
+        $("#logo").addClass("white");
+       
+        
+    }else{
+        document.getElementById("page-canvas").classList.remove("active-menu");
+        document.getElementById("menu").classList.remove("active-menu");
+            if (window.innerWidth>587)
+            {
+                $("#logo").css("top","5px");
+            }
+            $("#logo img").show();
+            $("#logo").removeClass("white");
+   }
+}
+    window.onscroll = function() {setMenu()};
+    function setMenu()
+    {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementsByClassName("menu")[0].classList.add("dark");
+            $("#logo img").hide();
+            $("#logo").css("top","5px");
+            $("#logo").addClass("white");
+            
+        }
+        else
+        {
+            document.getElementsByClassName("menu")[0].classList.remove("dark");
+        
+            if (window.innerWidth>587)
+            {
+            $("#logo").css("top","5px");    
+            }
+            
+            if (document.getElementById("naviswitcher").checked == false)
+            {
+                $("#logo img").show();
+                $("#logo").removeClass("white");
+            }
+        }
+    }
+</script>
+    
+    <script>
+    $(document).ready(function() {
+	//feed to parse
+	var feed = "https://www.pnp.de/_export/rss/nachrichten/landkreis_freyung_grafenau/freyung/index.rss";
+	
+	$.ajax(feed, {
+		accepts:{
+			xml:"application/rss+xml"
+		},
+		dataType:"xml",
+		success:function(data) {
+			//Credit: http://stackoverflow.com/questions/10943544/how-to-parse-an-rss-feed-using-javascript
+            var anz=0;
+            var meldungen='<div class="pure-g">';
+			$(data).find("item").each(function () { // or "item" or whatever suits your feed
+				var el = $(this);
+                
+                if(anz<8)
+               {
+                meldungen= meldungen + '<div class="pure-u-1 pure-u-lg-1-2 pure-u-xl-1-4 l-box">'
+                /*meldungen= meldungen + '<div class="meldung-item"><div class="meldung-head"><img src="' +el.find("enclosure").attr("url") + '" /></div>';*/
+                
+                if(el.find("enclosure").attr("url")== null)
+                {
+                    meldungen= meldungen + '<div class="meldung-item"><div class="meldung-head" style="height:200px;background:#fff"></div>';
+                }
+                else
+                {
+                    meldungen= meldungen + '<div class="meldung-item"><div class="meldung-head"><img src="' +el.find("enclosure").attr("url") + '" /></div>';    
+                }
+                meldungen= meldungen + '<div class="meldung-body"><a href="' +el.find("link").text() + '" target="_blank">' +el.find("title").text() + '</a></div>';
+                meldungen= meldungen + '</div></div>';
+                }
+                
+                anz=anz+1;
+				
+			});
+	       meldungen= meldungen + '</div>';
+            $("#meldungen").html(meldungen);
+		}	
+	});
+	
+});
+    
+    
+    </script>
+    <!--<![endif]--></head>
+
+<body>
+<label class="navi">
+<input id="naviswitcher" type="checkbox" onchange='handleChange(this);'>
+				<span class="menu">
+					<span class="hamburger"></span>
+				</span>
+				<ul id="menu" class="pure-g">
+					<li class="pure-u-lg-1 pure-u-1">
+						<a href="#wir" onclick='document.getElementById("naviswitcher").checked = false;handleChange(document.getElementById("naviswitcher"));'>Wir</a>
+					</li>
+					<!--<li class="pure-u-lg-1 pure-u-1">
+                        <a href="#kommunalwahl2020" onclick='document.getElementById("naviswitcher").checked = false;handleChange(document.getElementById("naviswitcher"));'>Kommunalwahl 2020</a>
+					</li>-->
+                    <li class="pure-u-lg-1 pure-u-1">
+						<a href="#mandat" onclick='document.getElementById("naviswitcher").checked = false;handleChange(document.getElementById("naviswitcher"));'>Mandatsträger</a>
+					</li>
+					<li class="pure-u-lg-1 pure-u-1">
+                        <a href="#vorstandschaft" onclick='document.getElementById("naviswitcher").checked = false;handleChange(document.getElementById("naviswitcher"));'>Vorstandschaft</a>
+					</li>
+                    <li class="pure-u-lg-1 pure-u-1">
+						<a href="#presse" onclick='document.getElementById("naviswitcher").checked = false;handleChange(document.getElementById("naviswitcher"));'>Regionales</a>
+					</li>
+					<li class="pure-u-lg-1 pure-u-1"> 
+						<a href="https://www.facebook.com/hohenau.jwu/" target="_blank" onclick='document.getElementById("naviswitcher").checked = false;handleChange(document.getElementById("naviswitcher"));'>Facebook</a>
+					</li>
+				</ul>   
+</label>
+    <a href="#"><div id="logo"><img src="images/jwu_hohenau.png"/></div></a>
+<div id="page-canvas">
+<section id="start">
+
+   <div class="pure-g">
+    <div class="pure-u-0 pure-u-md-1-8"></div>
+    <div class="pure-u-1 pure-u-md-3-4">
+        <div id="meinungen">
+            <span class="meinung" id="meinung1">Politik <span>#jünger</span> machen</span>
+            <span class="meinung" id="meinung2"><span>#Ideen</span> zusammen verwirklichen</span>
+            <span class="meinung" id="meinung3">Neue <span>#Meinungen</span> einbringen</span>
+            <span class="meinung" id="meinung4"><span>#Heimat</span> aktiv mitgestalten</span>
+        </div>
+        <a href="#wir" class="start-link"></a>
+    </div>
+    <div class="pure-u-0 pure-u-md-1-8"></div>
+    </div>    
+</section>    
+<section id="wir">
+    <div class="pure-g">
+        <div class="pure-u-0 pure-u-md-1-8"></div>
+        <div class="pure-u-1 pure-u-md-3-4 l-box">
+            <h3>Junge Wähler Union<br/> Hohenau - Schönbrunn am Lusen</h3>
+        <p>
+            Liebe Gemeindebürgerinnen und Gemeindebürger, Mitglieder und Freunde der Junge Wähler Union Hohenau-Schönbrunn am Lusen, herzlich willkommen auf unserer Homepage!</p>
+<p>Die Junge Wähler Union ist  seit Jahren eine gefestigte politische Jugendorganisation in der Gemeinde Hohenau. Bei uns nehmen junge Erwachsene ihre Zukunft selbst in die Hand und führen dabei auch neue jugendliche an die Politik heran.</p>
+<p>
+Als Ideen- und Impulsgeber will man sich auch zukünftig mit neuen Meinungen einbringen, sich für die Interessen der Gemeindebürgerinnen und Gemeindebürger einsetzen und somit aktiv an der Gestaltung unserer Heimatgemeinde mitarbeiten.<br>
+<br><br>
+          <h3>Auszug aus unserer Satzung<br/></h3>
+          <p>§2 Zweck des Vereins</p>
+           
+             <p>1. Der Verein setzt sich für  eine sachbezogene Kommunalpolitik in der Gemeinde Hohenau ein, die orientiert  ist am christlichen Welt- und Menschenbild, an freiheitlich-sozialer Gesellschafts- und Wirtschaftsordnung, am freiheitlich-demokratischen Rechtsstaat sowie an den Prinzipien Solidarität und Subsidiarität.</p>
+
+<p>Er nimmt sich auf dieser Grundlage besonders der  Anliegen junger Menschen in der Gemeinde Hohenau an und versteht sich als  überparteiliche Vertretung der Interessen junger Menschen im kommunalpolitischen  Leben der Gemeinde.</p>
+
+<p>2. Der Verein versteht sich  nicht als politische Partei. Er beteiligt sich jedoch als Wählergruppe im Sinne  von Artikel 19 ff GWG an den Kommunalwahlen im Landkreis Freyung-Grafenau.</p><br/>
+
+</p>
+            <!--<p><a class="button-white" href="#">Mitglied werden</a></p>-->
+        </div>
+        <div class="pure-u-0 pure-u-md-1-8"></div>
+    </div>    
+</section>
+<!--<section id="kommunalwahl2020">
+        <div class="pure-u-0 pure-u-md-1-8"></div>
+        <div class="pure-u-1 pure-u-md-3-4">
+            <h3>Kommunalwahl 2020</h3>
+            <div class="pure-g kandidaten">
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_01_michael_haydn.jpg"/>
+                        <span class="listenplatz">1</span>
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Michael Haydn</h4><br>
+                            <span>Ltd. Angestellter</span><br>
+                            <span>Jahrgang: 1989</span><br>
+                            <span>Schönbrunn am Lusen</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_02_alexander_thoma.jpg"/>
+                        <span class="listenplatz">2</span>
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Alexander Thoma</h4><br>
+                            <span>Wirtschaftsfachwirt (IHK)</span><br>
+                            <span>Jahrgang: 1991</span><br>
+                            <span>Eppenberg</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_03_werner_wittmann.jpg"/>
+                        <span class="listenplatz">3</span>
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Werner Wittmann</h4><br>
+							<span>Schreinermeister</span><br>
+                            <span>Jahrgang: 1969</span><br>
+                            <span>Kirchl</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_04_christina_mayer.jpg"/>
+                        <span class="listenplatz">4</span>
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Christina Mayer</h4><br>
+							<span>Gesundheits- und Krankenpflegerin</span><br>
+                            <span>Jahrgang: 1989</span><br>
+                            <span>Hohenau</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Reihe 2--><!--
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_05_julia_k%C3%BCblb%C3%B6ck.jpg"/>
+                        <span class="listenplatz">5</span>
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Julia Küblböck</h4><br>
+							<span>Studentin (BWL/VWL)</span><br>
+                            <span>Jahrgang: 1997</span><br>
+                            <span>Raimundsreut</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_06_tobias_denk.jpg"/>
+                        <span class="listenplatz">6</span>
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Tobias Denk</h4><br>
+							<span>Gesundheits- und Krankenpfleger</span><br>
+                            <span>Jahrgang: 1998</span><br>
+                            <span>Schönbrunnerhäuser</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_07_stefan_wagner.jpg"/>
+                        <span class="listenplatz">7</span>
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Stefan Wagner</h4><br>
+							<span>Auszubildender</span><br>
+                            <span>Jahrgang: 1995</span><br>
+                            <span>Bierhütte</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_08_stefanie_kueblboeck.jpg"/>
+                        <span class="listenplatz">8</span>
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Stefanie Küblböck</h4><br>
+							<span>Gesundheits- und Krankenpflegerin</span><br>
+                            <span>Jahrgang: 1990</span><br>
+                            <span>Kirchl</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Reihe 3--><!--
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_09_simon_schmid.jpg"/>
+                        <span class="listenplatz">9</span>
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Simon Schmid</h4><br>
+							<span>Industriemeister (Metall)</span><br>
+                            <span>Jahrgang: 1996</span><br>
+                            <span>Hohenau</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_10_alexander_schreiner.jpg"/>
+                        <span class="listenplatz">10</span>
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Alexander Schreiner</h4><br>
+							<span>Monteur</span><br>
+                            <span>Jahrgang: 1986</span><br>
+                            <span>Schönbrunn am Lusen</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_11_jan_melch.jpg"/>
+                        <span class="listenplatz">11</span>
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Jan Melch</h4><br>
+							<span>Maler- und Lackierermeister</span><br>
+                            <span>Jahrgang: 1990</span><br>
+                            <span>Saldenau</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_12_johannes_pichler.jpg"/>
+                        <span class="listenplatz">12</span>
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Johannes Pichler</h4><br>
+							<span>Maschinenbautechniker</span><br>
+                            <span>Jahrgang: 1995</span><br>
+                            <span>Raimundsreut</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Reihe 4--><!--
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_13_johannes_schmid.jpg"/>
+                        <span class="listenplatz">13</span>
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Johannes Schmid</h4><br>
+							<span>Industriemeister (Metall)</span><br>
+                            <span>Jahrgang: 1989</span><br>
+                            <span>Eppenberg</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_14_stefan_duschl.jpg"/>
+                        <span class="listenplatz">14</span>
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Stefan Duschl</h4><br>
+							<span>Bankfachwirt</span><br>
+                            <span>Jahrgang: 1993</span><br>
+                            <span>Kirchl</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_15_florian_eiler.jpg"/>
+                        <span class="listenplatz">15</span>
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Florian Eiler</h4><br>
+							<span>Industriemeister</span><br>
+							<span>(Kunststoff- und Kautschuktechnik)</span><br>
+                            <span>Jahrgang: 1990</span><br>
+                            <span>Saulorn</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_16_bastian_poxleitner.jpg"/>
+                        <span class="listenplatz">16</span>
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Bastian Poxleitner</h4><br>
+							<span>Elektromeister</span><br>
+                            <span>Jahrgang: 1990</span><br>
+                            <span>Schönbrunnerhäuser</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-sm-1 pure-u-lg-2-3 pure-u-xl-1 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <h4 class="no-kandidat"><a href="https://www.jwu-frg.de/" target="_blank">JWU Freyung Grafenau</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pure-u-0 pure-u-md-1-8"></div>
+</section>-->
+<section id="mandat">
+<div class="pure-u-0 pure-u-md-1-8"></div>
+        <div class="pure-u-1 pure-u-md-3-4">
+            <h3>Mandatsträger</h3>
+            <div class="pure-g kandidaten">
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-description-outer">
+                        <div class="kandidat-description">
+                            <p>Für die Wahlperiode<br/> <span style="font-size: 2rem">2020 - 2026</span><br/> im Gemeinderat <br/><span style="font-size: 3rem" class="col-green">#Hohenau</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_01_michael_haydn.jpg"/>
+                        <span class="listenplatz"><i class="icono-checkCircle"></i></span>-->
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Michael Haydn</h4><br>
+                            <span>Ltd. Angestellter</span><br>
+                            <span>Jahrgang: 1989</span><br>
+                            <span>Schönbrunn am Lusen</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_03_werner_wittmann.jpg"/>
+                        <span class="listenplatz"><i class="icono-checkCircle"></i></span>
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Werner Wittmann</h4><br>
+							<span>Schreinermeister</span><br>
+                            <span>Jahrgang: 1969</span><br>
+                            <span>Kirchl</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_06_tobias_denk.jpg"/>
+                        <span class="listenplatz"><i class="icono-checkCircle"></i></span>
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Tobias Denk</h4><br>
+							<span>Gesundheits- und Krankenpfleger</span><br>
+                            <span>Jahrgang: 1998</span><br>
+                            <span>Schönbrunnerhäuser</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-sm-1 pure-u-lg-2-3 pure-u-xl-1 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <h4 class="no-kandidat"><a href="http://www.wahlen.hohenau.de/" target="_blank">Informationen und Ergebnisse der Kommunalwahl in der Gemeinde Hohenau</a></h4>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="pure-u-0 pure-u-md-1-8"></div>
+</section>    
+<section id="nominierung" class="pb-4">
+<div class="pure-g">
+        <div class="pure-u-0 pure-u-md-1-8"></div>
+        <div class="pure-u-1 pure-u-md-3-4 l-box">
+            <h3>Team 2020</h3>
+          <img src="images/wahl_2020/2019_nominierungsversammlung_jwu_hohenau.jpg" alt="Sie wollen neuen Schwung in die Politik bringen: Die JWU Kandidatinnen und Kandidaten für die Kommunalwahl mit Spitzenkandidat Michael Haydn (Mitte sitzend) zusammen mit Bürgermeister Eduard Schmid (v.l), JWU Kreisvorsitzender Sebastian Schlutz und Bürgermeisterkandidat Josef Gais (2. v.r). (Foto Niedermeier)" title="Sie wollen neuen Schwung in die Politik bringen: Die JWU Kandidatinnen und Kandidaten für die Kommunalwahl mit Spitzenkandidat Michael Haydn (Mitte sitzend) zusammen mit Bürgermeister Eduard Schmid (v.l), JWU Kreisvorsitzender Sebastian Schlutz und Bürgermeisterkandidat Josef Gais (2. v.r). (Foto Niedermeier)" width="100%" />
+          <span class="bildunterschrift">Sie wollen auch nach der Kommunalwahl 2020 neuen Schwung in die Politik bringen: Die JWU Kandidatinnen und Kandidaten der Kommunalwahl 2020 mit Gemeinderat und Fraktionssprecher Michael Haydn (Mitte sitzend) und den Gemeinderäten Tobias Denk (1.  v.r) und Werner Wittmann (4. v.r). Weiter im Bild Altbürgermeister und Kreisrat Eduard Schmid (CSU) (1. v.l), JWU Kreisvorsitzender Sebastian Schlutz (2. v.l) und Bürgermeister Josef Gais(CSU) (2. v.r). (Foto Niedermeier)</span>
+        </div>
+        <div class="pure-u-0 pure-u-md-1-8"></div>
+</div>       
+   
+</section>
+<section id="vorstandschaft">
+    <div class="pure-g">
+        <div class="pure-u-0 pure-u-md-1-8"></div>
+        <div class="pure-u-1 pure-u-md-3-4">
+            <h3>Die Vorstandschaft</h3>
+            
+             <div class="pure-g kandidaten">
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_01_michael_haydn.jpg"/>
+                        
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>1.Vorstand</h4>
+                            <span>Michael Haydn</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_12_johannes_pichler.jpg"/>
+                        
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>2.Vorstand</h4>
+                            <span>Johannes Pichler</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_03_werner_wittmann.jpg"/>
+                       
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Schatzmeister</h4>
+                            <span>Werner Wittmann</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_05_julia_k%C3%BCblb%C3%B6ck.jpg"/>
+                        
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Schriftführerin</h4>
+                            <span>Julia Küblböck</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_04_christina_mayer.jpg"/>
+                        
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Beisitzerin</h4>
+                            <span>Christina Mayer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_13_johannes_schmid.jpg"/>
+                        
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Beisitzer</h4>
+                            <span>Johannes Schmid</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_08_stefanie_kueblboeck.jpg"/>
+                        
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Beisitzerin</h4>
+                            <span>Stefanie Küblböck</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_02_alexander_thoma.jpg"/>
+                        
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Beisitzer</h4>
+                            <span>Alexander Thoma</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_00_dummy.jpg"/>
+                        
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Beisitzer</h4>
+                            <span>Josef Gais</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_00_dummy.jpg"/>
+                        
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Beisitzer</h4>
+                            <span>Klaus Schuster</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
+                    <div class="kandidat-content">
+                        <img src="images/wahl_2020/jwu_00_dummy.jpg"/>
+                        
+                        <div class="kandidat-info">
+                            <div class="kandidat-info-inner">
+                            <h4>Beisitzer</h4>
+                            <span>Michael Mandl</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="pure-g kan">
+                <div class="pure-u-1 pure-u-md-1 l-box">
+                    <div class="kan-card pb-1">
+                        <div class="kan-top back-white bor-white col-blue" style="text-align: center">
+                        <div class="kan-name">Michael Haydn</div>
+                        </div>
+                        <div class="kan-body bor-white col-white" style="text-align: center">
+                            <span>1.Vorstand</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2 l-box">
+                    <div class="kan-card pb-1">
+                        <div class="kan-top back-white bor-white col-blue">
+                        <div class="kan-name">Johannes Pichler</div>
+                        </div>
+                        <div class="kan-body bor-white col-white">
+                            <span>2.Vorstand</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2 l-box">
+                    <div class="kan-card pb-1">
+                        <div class="kan-top back-white bor-white col-blue">
+                        <div class="kan-name">Werner Wittmann</div>
+                        </div>
+                        <div class="kan-body bor-white col-white">
+                            <span>Schatzmeister</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2 l-box">
+                    <div class="kan-card pb-1">
+                        <div class="kan-top back-white bor-white col-blue">
+                        <div class="kan-name">Julia Küblböck</div>
+                        </div>
+                        <div class="kan-body bor-white col-white">
+                            <span>Schriftführerin</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2 l-box">
+                    <div class="kan-card pb-1">
+                        <div class="kan-top back-white bor-white col-blue">
+                        <div class="kan-name">Josef Gais</div>
+                        </div>
+                        <div class="kan-body bor-white col-white">
+                            <span>Beisitzer</span>
+                        </div>
+                    </div>    
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2 l-box">
+                    <div class="kan-card pb-1">
+                        <div class="kan-top back-white bor-white col-blue">
+                        <div class="kan-name">Stefanie Küblböck</div>
+                        </div>
+                        <div class="kan-body bor-white col-white">
+                            <span>Beisitzer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2 l-box">
+                    <div class="kan-card pb-1">
+                        <div class="kan-top back-white bor-white col-blue">
+                        <div class="kan-name">Michael Mandl</div>
+                        </div>
+                        <div class="kan-body bor-white col-white">
+                            <span>Beisitzer</span>
+                        </div>
+                    </div>    
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2 l-box">
+                    <div class="kan-card pb-1">
+                        <div class="kan-top back-white bor-white col-blue">
+                        <div class="kan-name">Christina Mayer</div>
+                        </div>
+                        <div class="kan-body bor-white col-white">
+                            <span>Beisitzer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2 l-box">
+                    <div class="kan-card pb-1">
+                        <div class="kan-top back-white bor-white col-blue">
+                        <div class="kan-name">Johannes Schmid</div>
+                        </div>
+                        <div class="kan-body bor-white col-white">
+                            <span>Beisitzer</span>
+                        </div>
+                    </div>    
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2 l-box">
+                    <div class="kan-card pb-1">
+                        <div class="kan-top back-white bor-white col-blue">
+                        <div class="kan-name">Klaus Schuster</div>
+                        </div>
+                        <div class="kan-body bor-white col-white">
+                            <span>Beisitzer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2 l-box">
+                    <div class="kan-card pb-4">
+                        <div class="kan-top back-white bor-white col-blue">
+                        <div class="kan-name">Alexander Thoma</div>
+                        </div>
+                        <div class="kan-body bor-white col-white">
+                            <span>Beisitzer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+        <div class="pure-u-0 pure-u-md-1-8"></div>
+    </div>    
+</section>
+<section id="presse">
+ <div class="pure-g">
+        <div class="pure-u-0 pure-u-md-1-8"></div>
+        <div class="pure-u-1 pure-u-md-3-4 l-box">
+            <h3>Regionales</h3>
+        <div id="meldungen">
+            
+        </div>
+        <p style="text-align: right;font-size: 1rem;margin-top:0;" class="l-box">Meldungen aus der lokalen Tageszeitung</p>
+        <p class="slogan">Politik mit einfachen Worten</p> 
+        </div>
+        <div class="pure-u-0 pure-u-md-1-8"></div>
+    </div>       
+   
+</section>
+<!--<section id="kontakt">
+    
+    
+</section>-->    
+<footer>
+<div class="pure-g">
+<div class="pure-u-1 pure-u-md-1-2 links">
+    <a href="./impressum.html">Impressum</a> | <a href="./datenschutz.html">Datenschutzerklärung</a></div><div class="pure-u-1 pure-u-md-1-2 copyright"><span>2019 &copy; JWU Hohenau-Schönbrunn am Lusen</span></div></div>
+</footer>    
+
+
+</div>
+<!--<div id="bm-kandidat"><a href="https://josefgais.com" target="_blank"><img src="images/bm/jwu_josef_gais.png"/></a></div>-->
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <meta name="theme-color" content="#0d88c5" />
+    <title>JWU Hohenau-Schönbrunn am Lusen | Junge Wähler Union</title>
+    <meta itemprop="name" content="JWU Hohenau-Schönbrunn am Lusen | Junge Wähler Union">
+    <meta name="description" content="Die Junge Wähler Union Hohenau-Schönbrunn am Lusen ist eine 2001 gegründete politische Jugendorganisation in der Gemeinde Hohenau. Die JWU setzt sich für die Interessen der Gemeindebürger ein will als Ideen- und Impulsgeber aktiv an der Gestaltung unserer Heimat mitarbeiten.">
+    <meta itemprop="description" content="Die Junge Wähler Union Hohenau-Schönbrunn am Lusen ist eine 2001 gegründete politische Jugendorganisation in der Gemeinde Hohenau. Die JWU setzt sich für die Interessen der Gemeindebürger ein will als Ideen- und Impulsgeber aktiv an der Gestaltung unserer Heimat mitarbeiten.">
+    <meta name="keywords" content="Junge Wähler Union, JWU Hohenau, JWU Schönbrunn am Lusen, Junge Wähler Union, JWU FRG, JWU Freyung-Grafenau">
+    <link rel="shortcut icon" href="https://www.jwu-frg.de/favicon.ico" />
+    <link rel="icon" href="https://www.jwu-frg.de/favicon.ico"/>
+    <link rel="stylesheet" href="css/pure-min.css">    <!--[if lte IE 8]>
+
+        <link rel="stylesheet" href="grid-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/grid.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+<script>
+    function handleChange(checkbox) {
+    if(checkbox.checked == true){
+        document.getElementById("page-canvas").classList.add("active-menu");
+        document.getElementById("menu").classList.add("active-menu");
+        $("#logo img").hide();
+        $("#logo").addClass("white");
+       
+        
+    }else{
+        document.getElementById("page-canvas").classList.remove("active-menu");
+        document.getElementById("menu").classList.remove("active-menu");
+            if (window.innerWidth>587)
+            {
+                $("#logo").css("top","5px");
+            }
+            $("#logo img").show();
+            $("#logo").removeClass("white");
+   }
+}
+    window.onscroll = function() {setMenu()};
+    function setMenu()
+    {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementsByClassName("menu")[0].classList.add("dark");
+            $("#logo img").hide();
+            $("#logo").css("top","5px");
+            $("#logo").addClass("white");
+            
+        }
+        else
+        {
+            document.getElementsByClassName("menu")[0].classList.remove("dark");
+        
+            if (window.innerWidth>587)
+            {
+            $("#logo").css("top","5px");    
+            }
+            
+            if (document.getElementById("naviswitcher").checked == false)
+            {
+                $("#logo img").show();
+                $("#logo").removeClass("white");
+            }
+        }
+    }
+</script>
+    <!--<![endif]--></head>
+
+<body>
+<label class="navi">
+<input id="naviswitcher" type="checkbox" onchange='handleChange(this);'>
+				<span class="menu">
+					<span class="hamburger"></span>
+				</span>
+				<ul id="menu" class="pure-g">
+					<li class="pure-u-lg-1 pure-u-1">
+						<a href="./index.html#wir" onclick='document.getElementById("naviswitcher").checked = false;handleChange(document.getElementById("naviswitcher"));'>Wir</a>
+					</li>
+					<!--<li class="pure-u-lg-1 pure-u-1">
+                        <a href="./index.html#kommunalwahl2020" onclick='document.getElementById("naviswitcher").checked = false;handleChange(document.getElementById("naviswitcher"));'>Kommunalwahl 2020</a>
+					</li>-->
+                    
+                    <li class="pure-u-lg-1 pure-u-1">
+						<a href="./index.html#mandat" onclick='document.getElementById("naviswitcher").checked = false;handleChange(document.getElementById("naviswitcher"));'>Mandatsträger</a>
+					</li>
+					<li class="pure-u-lg-1 pure-u-1">
+                        <a href="./index.html#vorstandschaft" onclick='document.getElementById("naviswitcher").checked = false;handleChange(document.getElementById("naviswitcher"));'>Vorstandschaft</a>
+					</li>
+                    <li class="pure-u-lg-1 pure-u-1">
+						<a href="./index.html#presse" onclick='document.getElementById("naviswitcher").checked = false;handleChange(document.getElementById("naviswitcher"));'>Regionales</a>
+					</li>
+					<li class="pure-u-lg-1 pure-u-1"> 
+						<a href="https://www.facebook.com/hohenau.jwu/" target="_blank" onclick='document.getElementById("naviswitcher").checked = false;handleChange(document.getElementById("naviswitcher"));'>Facebook</a>
+					</li>
+				</ul>   
+</label>
+    <a href="./index.html#"><div id="logo"><img src="images/jwu_hohenau.png"/></div></a>
+<div id="page-canvas">
+<section id="start">
+
+   <div class="pure-g">
+    <div class="pure-u-0 pure-u-md-1-8"></div>
+    <div class="pure-u-1 pure-u-md-3-4">
+        <div id="meinungen">
+            <span class="meinung" id="meinung1">Impressum</span>
+            <span class="meinung" id="meinung2"><span>Impressum</span></span>
+            <span class="meinung" id="meinung3">Impressum</span>
+            <span class="meinung" id="meinung4"><span>Impressum</span></span>
+        </div>
+        <a href="#impressum" class="start-link"></a>
+    </div>
+    <div class="pure-u-0 pure-u-md-1-8"></div>
+    </div>    
+</section>    
+<section id="impressum">
+    <div class="pure-g">
+        <div class="pure-u-0 pure-u-md-1-8"></div>
+        <div class="pure-u-1 pure-u-md-3-4 l-box">
+            <h3>Impressum – Angaben nach §5 Telemediengesetz (TMG)</h3>
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-md-1-2 l-box">
+                    <p><b>Herausgeber</b><br/>JWU Hohenau - Schönbrunn am Lusen
+                    </p>
+                    <p>
+                    <b>Vorsitzender</b><br/>
+Michael Haydn<br/>
+                        jwu-hohenau(at)web.de</p>
+
+                    <p><b>Sitz des Vereins</b><br/> 
+Neuraimundsreut 11<br/>
+94545 Hohenau<br/>
+Telefon: 08552 974 11 181<br/>
+                        Telefax: 08552 974 11 189</p>
+                    <p>                    
+    Dieses Impressum gilt uneingeschränkt auch für unseren Unternehmensauftritt auf Facebook unter <a target="_blank" href="https://www.facebook.com/hohenau.jwu">www.facebook.com/hohenau.jwu</a>
+</p>
+<p>                   
+&copy; Copyright JWU Hohenau - Schönbrunn am Lusen. Alle Rechte vorbehalten. Alle Texte, Bilder, Grafiken, Ton-, Video- und Animationsdateien unterliegen dem Urheberrecht und anderen Gesetzen zum Schutz geistigen Eigentums. Der Inhalt dieser Website darf ohne vorherige Zustimmung nicht kopiert, verbreitet, verändert oder auf sonstige Art genutzt werden.
+                    </p>
+
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2 l-box">
+                 <p>Information nach dem Verbraucherstreitbeilegungsgesetz:
+                     Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a target="_blank" href="http://ec.europa.eu/consumers/odr">http://ec.europa.eu/consumers/odr</a></p>
+<p>
+Es besteht keine Verpflichtung und keine Bereitschaft zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle.
+</p>
+<p>                    
+Rechtliche Hinweise, Qualitätssicherung, Haftungsausschluss
+Die JWU Hohenau - Schönbrunn am Lusen ist bemüht, auf ihrer Website stets richtige, aktuelle und vollständige Informationen bereitzustellen und ändert oder ergänzt diese daher bei Bedarf laufend und ohne vorherige Ankündigung. Dennoch müssen wir für Korrektheit, Aktualität und Vollständigkeit jede Gewähr, Haftung oder Garantie ausschließen. Dies gilt auch für alle Verweise, so genannte ‚Hyperlinks‘, welche die JWU Hohenau - Schönbrunn am Lusen auf ihrer Website direkt oder indirekt anbietet. Die JWU Hohenau - Schönbrunn am Lusen kann für die Inhalte solcher externer Internet-Auftritte, die Sie mittels eines Links oder sonstiger Hinweise erreichen, keine Verantwortung übernehmen. Ferner haftet die JWU Hohenau - Schönbrunn am Lusen nicht für direkte oder indirekte Schäden (inkl. entgangener Gewinne), die auf Informationen zurückgeführt werden können, die auf diesen externen Internet-Auftritten stehen.
+</p>
+   
+                </div>
+            </div>
+        </div>
+        <div class="pure-u-0 pure-u-md-1-8"></div>
+    </div>    
+</section>
+<!--<section id="kontakt">
+    
+    
+</section>-->    
+<footer>
+<div class="pure-g">
+<div class="pure-u-1 pure-u-md-1-2 links">
+    <a href="#">Impressum</a> | <a href="./datenschutz.html">Datenschutzerklärung</a></div><div class="pure-u-1 pure-u-md-1-2 copyright"><span>2019 &copy; JWU Hohenau-Schönbrunn a. L.</span></div></div>
+</footer>    
+
+
+</div>
+   
+</body>
+</html>

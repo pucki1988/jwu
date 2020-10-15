@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <meta name="theme-color" content="#0d88c5" />
+    <title>JWU Hohenau-Schönbrunn am Lusen | Junge Wähler Union</title>
+    <meta itemprop="name" content="JWU Hohenau-Schönbrunn am Lusen | Junge Wähler Union">
+    <meta name="description" content="Die Junge Wähler Union Hohenau-Schönbrunn am Lusen ist eine 2001 gegründete politische Jugendorganisation in der Gemeinde Hohenau. Die JWU setzt sich für die Interessen der Gemeindebürger ein will als Ideen- und Impulsgeber aktiv an der Gestaltung unserer Heimat mitarbeiten.">
+    <meta itemprop="description" content="Die Junge Wähler Union Hohenau-Schönbrunn am Lusen ist eine 2001 gegründete politische Jugendorganisation in der Gemeinde Hohenau. Die JWU setzt sich für die Interessen der Gemeindebürger ein will als Ideen- und Impulsgeber aktiv an der Gestaltung unserer Heimat mitarbeiten.">
+    <meta name="keywords" content="Junge Wähler Union, JWU Hohenau, JWU Schönbrunn am Lusen, Junge Wähler Union, JWU FRG, JWU Freyung-Grafenau">
+    <link rel="shortcut icon" href="https://www.jwu-frg.de/favicon.ico" />
+    <link rel="icon" href="https://www.jwu-frg.de/favicon.ico"/>
+    <link rel="stylesheet" href="css/pure-min.css">    <!--[if lte IE 8]>
+
+        <link rel="stylesheet" href="grid-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/grid.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+<script>
+    function handleChange(checkbox) {
+    if(checkbox.checked == true){
+        document.getElementById("page-canvas").classList.add("active-menu");
+        document.getElementById("menu").classList.add("active-menu");
+        $("#logo img").hide();
+        $("#logo").addClass("white");
+       
+        
+    }else{
+        document.getElementById("page-canvas").classList.remove("active-menu");
+        document.getElementById("menu").classList.remove("active-menu");
+            if (window.innerWidth>587)
+            {
+                $("#logo").css("top","5px");
+            }
+            $("#logo img").show();
+            $("#logo").removeClass("white");
+   }
+}
+    window.onscroll = function() {setMenu()};
+    function setMenu()
+    {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementsByClassName("menu")[0].classList.add("dark");
+            $("#logo img").hide();
+            $("#logo").css("top","5px");
+            $("#logo").addClass("white");
+            
+        }
+        else
+        {
+            document.getElementsByClassName("menu")[0].classList.remove("dark");
+        
+            if (window.innerWidth>587)
+            {
+            $("#logo").css("top","5px");    
+            }
+            
+            if (document.getElementById("naviswitcher").checked == false)
+            {
+                $("#logo img").show();
+                $("#logo").removeClass("white");
+            }
+        }
+    }
+</script>
+    <!--<![endif]--></head>
+
+<body>
+<label class="navi">
+<input id="naviswitcher" type="checkbox" onchange='handleChange(this);'>
+				<span class="menu">
+					<span class="hamburger"></span>
+				</span>
+				<ul id="menu" class="pure-g">
+					<li class="pure-u-lg-1 pure-u-1">
+						<a href="./index.html#wir" onclick='document.getElementById("naviswitcher").checked = false;handleChange(document.getElementById("naviswitcher"));'>Wir</a>
+					</li>
+					<!--<li class="pure-u-lg-1 pure-u-1">
+                        <a href="./index.html#kommunalwahl2020" onclick='document.getElementById("naviswitcher").checked = false;handleChange(document.getElementById("naviswitcher"));'>Kommunalwahl 2020</a>
+					</li>-->
+                    
+                    <li class="pure-u-lg-1 pure-u-1">
+						<a href="./index.html#mandat" onclick='document.getElementById("naviswitcher").checked = false;handleChange(document.getElementById("naviswitcher"));'>Mandatsträger</a>
+					</li>
+					<li class="pure-u-lg-1 pure-u-1">
+                        <a href="./index.html#vorstandschaft" onclick='document.getElementById("naviswitcher").checked = false;handleChange(document.getElementById("naviswitcher"));'>Vorstandschaft</a>
+					</li>
+                    <li class="pure-u-lg-1 pure-u-1">
+						<a href="./index.html#presse" onclick='document.getElementById("naviswitcher").checked = false;handleChange(document.getElementById("naviswitcher"));'>Regionales</a>
+					</li>
+					<li class="pure-u-lg-1 pure-u-1"> 
+						<a href="https://www.facebook.com/hohenau.jwu/" target="_blank" onclick='document.getElementById("naviswitcher").checked = false;handleChange(document.getElementById("naviswitcher"));'>Facebook</a>
+					</li>
+				</ul>   
+</label>
+    <a href="./index.html#"><div id="logo"><img src="images/jwu_hohenau.png"/></div></a>
+<div id="page-canvas">
+<section id="start">
+
+   <div class="pure-g">
+    <div class="pure-u-0 pure-u-md-1-8"></div>
+    <div class="pure-u-1 pure-u-md-3-4">
+        <div id="meinungen">
+            <span class="meinung" id="meinung1">Datenschutzerklärung</span>
+            <span class="meinung" id="meinung2"><span>Datenschutzerklärung</span></span>
+            <span class="meinung" id="meinung3">Datenschutzerklärung</span>
+            <span class="meinung" id="meinung4"><span>Datenschutzerklärung</span></span>
+        </div>
+        <a href="#impressum" class="start-link"></a>
+    </div>
+    <div class="pure-u-0 pure-u-md-1-8"></div>
+    </div>    
+</section>    
+<section id="impressum">
+    <div class="pure-g">
+        <div class="pure-u-0 pure-u-md-1-8"></div>
+        <div class="pure-u-1 pure-u-md-3-4 l-box">
+            <h3>Datenschutzerklärung</h3>
+<p><strong>1. Datenschutz auf einen Blick</strong></p>
+<p><strong>Allgemeine  Hinweise</strong><br />
+Die folgenden Hinweise geben einen  einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert,  wenn Sie unsere Website besuchen. Personenbezogene Daten sind alle Daten, mit  denen Sie persönlich identifiziert werden können. Ausführliche Informationen  zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten  Datenschutzerklärung.</p>
+<p><strong>Datenerfassung  auf unserer Website</strong></p>
+<p><strong>Wer ist verantwortlich für die Datenerfassung  auf dieser Website?</strong> <br />
+  Die Datenverarbeitung auf dieser  Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem  Impressum dieser Website entnehmen.</p>
+<p><strong>Wie erfassen wir Ihre Daten?</strong> <br />
+  Ihre Daten werden zum einen dadurch  erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z.B. um Daten  handeln, die Sie in ein Kontaktformular eingeben.<br />
+  Andere Daten werden automatisch beim  Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem  technische Daten (z.B. Internetbrowser, Betriebssystem oder Uhrzeit des  Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie  unsere Website betreten.</p>
+<p><strong>Wofür nutzen wir Ihre Daten?</strong> <br />
+  Ein Teil der Daten wird erhoben, um  eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten  können zur Analyse Ihres Nutzerverhaltens verwendet werden.</p>
+<p><strong>Welche Rechte haben Sie bezüglich  Ihrer Daten?</strong> <br />
+  Sie haben jederzeit das Recht  unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen  Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung, Sperrung  oder Löschung dieser Daten zu verlangen. Hierzu sowie zu weiteren Fragen zum  Thema Datenschutz können Sie sich jederzeit unter der im Impressum angegebenen  Adresse an uns wenden. Des Weiteren steht Ihnen ein Beschwerderecht bei der  zuständigen Aufsichtsbehörde zu.</p>
+<p>Außerdem haben Sie das Recht, unter  bestimmten Umständen die Einschränkung der Verarbeitung Ihrer personenbezogenen  Daten zu verlangen. Details hierzu entnehmen Sie der Datenschutzerklärung unter  &bdquo;Recht auf Einschränkung der Verarbeitung&ldquo;.</p>
+<p><strong>Analyse-Tools  und Tools von Drittanbietern</strong><br />
+  Beim Besuch unserer Website kann Ihr  Surf-Verhalten statistisch ausgewertet werden. Das geschieht vor allem mit  Cookies und mit sogenannten Analyseprogrammen. Die Analyse Ihres  Surf-Verhaltens erfolgt in der Regel anonym; das Surf-Verhalten kann nicht zu  Ihnen zurückverfolgt werden. Sie können dieser Analyse widersprechen oder sie  durch die Nichtbenutzung bestimmter Tools verhindern. Detaillierte  Informationen dazu finden Sie in der folgenden Datenschutzerklärung.</p>
+<p>&nbsp;</p>
+<p><strong>2.  Allgemeine Hinweise und Pflichtinformationen</strong></p>
+<p><strong>Datenschutz</strong><br />
+  Die Betreiber dieser Seiten nehmen  den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre  personenbezogenen Daten vertraulich und entsprechend der gesetzlichen  Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
+<p>Wenn Sie diese Website benutzen,  werden verschiedene personenbezogene Daten erhoben. Personenbezogene Daten sind  Daten, mit denen Sie persönlich identifiziert werden können. Die vorliegende  Datenschutzerklärung erläutert, welche Daten wir erheben und wofür wir sie  nutzen. Sie erläutert auch, wie und zu welchem Zweck das geschieht.</p>
+<p>Wir weisen darauf hin, dass die  Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail)  Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem  Zugriff durch Dritte ist nicht möglich.</p>
+<p><strong>Hinweis zur  verantwortlichen Stelle</strong></p>
+<p>Die verantwortliche Stelle für die  Datenverarbeitung auf dieser Website ist:</p>
+<p>JWU Hohenau - Schönbrunn am Lusen <br />
+  Michael Haydn<br />
+  Neuraimundsreut 11<br />
+  94545 Hohenau</p>
+<p>Telefon: 08552 974 11 181<br />
+  E-Mail: jwu-hohenau(at)web.de<br />
+  <br />
+  Verantwortliche Stelle ist die natürliche oder juristische Person, die allein  oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von  personenbezogenen Daten (z.B. Namen, E-Mail-Adressen o. Ä.) entscheidet.</p>
+<p><strong>Widerruf  Ihrer Einwilligung zur Datenverarbeitung</strong><br />
+  Viele Datenverarbeitungsvorgänge  sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits  erteilte Einwilligung jederzeit widerrufen. Dazu reicht eine formlose Mitteilung  per E-Mail an uns. Die Rechtmäßigkeit der bis zum Widerruf erfolgten  Datenverarbeitung bleibt vom Widerruf unberührt.</p>
+<p><strong>Beschwerderecht  bei der zuständigen Aufsichtsbehörde</strong><br />
+  Im Falle datenschutzrechtlicher  Verstöße steht dem Betroffenen ein Beschwerderecht bei der zuständigen  Aufsichtsbehörde zu. Zuständige Aufsichtsbehörde in datenschutzrechtlichen  Fragen ist der Landesdatenschutzbeauftragte des Bundeslandes, in dem unser  Unternehmen seinen Sitz hat. Eine Liste der Datenschutzbeauftragten sowie deren  Kontaktdaten können folgendem Link entnommen werden:  https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html.</p>
+<p><strong>Recht auf  Datenübertragbarkeit</strong><br />
+  Sie haben das Recht, Daten, die wir  auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert  verarbeiten, an sich oder an einen Dritten in einem gängigen, maschinenlesbaren  Format aushändigen zu lassen. Sofern Sie die direkte Übertragung der Daten an  einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch  machbar ist.</p>
+<p><strong>SSL- bzw.  TLS-Verschlüsselung</strong><br />
+  Diese Seite nutzt aus  Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie  zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber  senden, eine SSL-bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung  erkennen Sie daran, dass die Adresszeile des Browsers von &ldquo;http://&rdquo; auf  &ldquo;https://&rdquo; wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.<br />
+  Wenn die SSL- bzw.  TLS-Verschlüsselung aktiviert ist, können die Daten, die Sie an uns  übermitteln, nicht von Dritten mitgelesen werden.</p>
+<p><strong>Auskunft,  Sperrung, Löschung und Berichtigung</strong><br />
+  Sie haben im Rahmen der geltenden  gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über  Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und  den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung, Sperrung  oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema  personenbezogene Daten können Sie sich jederzeit unter der im Impressum  angegebenen Adresse an uns wenden.</p>
+<p><strong>Widerspruch  gegen Werbe-E-Mails</strong><br />
+  Der Nutzung von im Rahmen der  Impressumspflicht veröffentlichten Kontaktdaten zur Übersendung von nicht  ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit  widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche  Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch  Spam-E-Mails, vor.</p>
+<p>&nbsp;</p>
+<p><strong>3.  Datenerfassung auf unserer Website</strong></p>
+<p><strong>Cookies</strong><br />
+  Die Internetseiten verwenden  teilweise so genannte Cookies. Cookies richten auf Ihrem Rechner keinen Schaden  an und enthalten keine Viren. Cookies dienen dazu, unser Angebot  nutzerfreundlicher, effektiver und sicherer zu machen. Cookies sind kleine  Textdateien, die auf Ihrem Rechner abgelegt werden und die Ihr Browser  speichert.<br />
+  Die meisten der von uns verwendeten  Cookies sind so genannte &ldquo;Session-Cookies&rdquo;. Sie werden nach Ende Ihres Besuchs  automatisch gelöscht. Andere Cookies bleiben auf Ihrem Endgerät gespeichert bis  Sie diese löschen. Diese Cookies ermöglichen es uns, Ihren Browser beim  nächsten Besuch wiederzuerkennen.</p>
+<p>Sie können Ihren Browser so  einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies  nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder  generell ausschließen sowie das automatische Löschen der Cookies beim Schließen  des Browser aktivieren. Bei der Deaktivierung von Cookies kann die  Funktionalität dieser Website eingeschränkt sein.</p>
+<p>Cookies, die zur Durchführung des  elektronischen Kommunikationsvorgangs oder zur Bereitstellung bestimmter, von  Ihnen erwünschter Funktionen (z.B. Warenkorbfunktion) erforderlich sind, werden  auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO gespeichert. Der Websitebetreiber  hat ein berechtigtes Interesse an der Speicherung von Cookies zur technisch  fehlerfreien und optimierten Bereitstellung seiner Dienste. Soweit andere  Cookies (z.B. Cookies zur Analyse Ihres Surfverhaltens) gespeichert werden,  werden diese in dieser Datenschutzerklärung gesondert behandelt.</p>
+<p><strong>Cookie-Erklärung</strong><br />
+  Diese Seite verwendet nur Cookies des Hosting-Anieters 1&amp;1 IONOS SE, Elgendorfer Str. 57, 56410 Montabaur (im Folgenden IONOS). Die Webhosting-Plattform IONOS verwendet Cookies, um die Performance zu verbessern.</p>
+<p>1. Herkunft<br />
+First-Party-Cookies: werden direkt von IONOS hinterlegt und verwaltet.</p>
+<p>2. Zweck<br />
+  Technische Cookies: Hierdurch wird unter anderem eine reibungslose Nutzung der Navigation auf der Website gewährleistet. Zusätzlich wird auch der Zugriff auf Tools mit eingeschränktem Zugriff ermöglicht.</p>
+<p>3. Gültigkeit<br />
+  Session Cookies: Diese Cookies sammeln und speichern Daten für die Dauer, auf der der Nutzer sich auf der IONOS Website befindet.</p>
+<p>Cookies werden von der Plattform verwendet, um sicherzustellen, dass der Datenverkehr während der Sitzung eines Endbenutzers an dieselbe Infrastruktur weitergeleitet wird, um sicherzustellen, dass die Antworten, die sie erhalten, die bestmögliche Leistung bieten.</p>
+<p>Diese Cookies enthalten keine persönlichen Informationen, sie werden nur für die Dauer der Sitzung verwendet und dienen zur Leistungssteigerung für den Endkunden. Als solche sind sie von der Notwendigkeit befreit, das Einverständnis des Endnutzers einzuholen.</p>
+<p>Wir haben mit IONOS einen Vertrag zur Auftragsverarbeitung (AVV) abgeschlossen<br />
+</p>
+<p><strong>Server-Log-Dateien</strong><br />
+Der Provider der Seiten erhebt und  speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr  Browser automatisch an uns übermittelt. Dies sind:</p>
+<ul type="disc">
+  <li>Browsertyp und Browserversion</li>
+  <li>verwendetes Betriebssystem</li>
+  <li>Referrer URL</li>
+  <li>Hostname des zugreifenden Rechners</li>
+  <li>Uhrzeit der Serveranfrage</li>
+  <li>IP-Adresse</li>
+</ul>
+<p>Eine Zusammenführung dieser Daten  mit anderen Datenquellen wird nicht vorgenommen.<br />
+Die Erfassung dieser Daten erfolgt  auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein  berechtigtes Interesse an der technisch fehlerfreien Darstellung und der  Optimierung seiner Website – hierzu müssen die Server-Log-Files erfasst werden.</p>
+<p>&nbsp;</p>
+<p><strong>Anfrage per  E-Mail, Telefon oder Telefax</strong><br />
+  Wenn Sie uns per E-Mail, Telefon  oder Telefax kontaktieren, wird Ihre Anfrage inklusive aller daraus  hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der  Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten  geben wir nicht ohne Ihre Einwilligung weiter.</p>
+<p>Die Verarbeitung dieser Daten  erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit  der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung  vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die  Verarbeitung auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) und / oder auf  unseren berechtigten Interessen (Art. 6 Abs. 1 lit. f DSGVO), da wir ein  berechtigtes Interesse an der effektiven Bearbeitung der an uns gerichteten  Anfragen haben.</p>
+<p>Die von Ihnen an uns per  Kontaktanfragen übersandten Daten verbleiben bei uns, bis Sie uns zur Löschung  auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die  Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung Ihres  Anliegens). Zwingende gesetzliche Bestimmungen – insbesondere gesetzliche  Aufbewahrungsfristen – bleiben unberührt.</p>
+
+
+        </div>
+        <div class="pure-u-0 pure-u-md-1-8"></div>
+    </div>    
+</section>
+<!--<section id="kontakt">
+    
+    
+</section>-->    
+<footer>
+<div class="pure-g">
+<div class="pure-u-1 pure-u-md-1-2 links">
+    <a href="./impressum.html">Impressum</a> | <a href="#">Datenschutzerklärung</a></div><div class="pure-u-1 pure-u-md-1-2 copyright"><span>2019 &copy; JWU Hohenau-Schönbrunn a. L.</span></div></div>
+</footer>    
+
+
+</div>
+   
+</body>
+</html>
