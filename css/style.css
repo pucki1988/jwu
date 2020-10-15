@@ -1,0 +1,854 @@
+html, button, input, select, textarea,
+    .pure-g [class *= "pure-u"] {
+        /* Set your content font stack here: */
+        font-family: 'Ubuntu Condensed', sans-serif;
+    }
+html {
+  scroll-behavior: smooth;
+}
+body{
+    overflow-x:hidden;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    max-width: 100vw;
+}
+
+.pure-g > div {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+.l-box {
+    padding: 0 1em;
+}
+.pb-1{
+    padding-bottom: .5rem;
+}
+.pb-2{
+    padding-bottom: 2rem;
+}
+.pb-4{
+    padding-bottom: 4rem;
+}
+
+.back-green{
+    background: #78a939 !important;
+}
+
+.col-green{
+    color: #78a939 !important;
+}
+
+.bor-green{
+    border-color: #78a939 !important;
+}
+
+.back-white{
+    background: #fff !important;
+}
+
+.col-white{
+    color: #fff !important;
+}
+
+.bor-white{
+    border-color: #fff !important;
+}
+.col-blue{
+    color: #0d88c5 !important;
+}
+
+
+p{
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: .5rem;
+}
+
+#nominierung p{
+    text-align: left;
+    
+}
+.button-white{
+    background: rgba(255,255,255,1);
+    font-size: 1.5rem;
+    padding:0.5rem 1rem;
+    color:#0d88c5;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-out;
+-moz-transition: all 0.3s ease-out;
+-ms-transition: all 0.3s ease-out;
+-o-transition: all 0.3s ease-out;
+transition: all 0.3s ease-out;
+}
+
+.button-white:hover{
+    background: rgba(255,255,255,0.90);
+}
+
+h3{
+    font-size: 3rem;
+    text-align: center;
+    padding: 0 0 1rem 0;
+}
+h4{
+    font-size: 2rem;
+    margin: 0;
+    padding: 10px;
+}
+#nominierung h4{
+    padding-left: 0;
+}
+
+.kandidat-content h4{
+    text-align: center;
+    background: #0d88c5;
+}
+
+#vorstandschaft .kandidat-content h4{
+    background: #fff;
+}
+
+
+#logo
+{
+    position: fixed;
+    left: 50vw;
+    top: 5px;
+    z-index: 20;
+}
+
+#logo:after{
+    width: 140px;
+    height: 70px;
+    content: '';
+    opacity: 0;
+    background-size: 140px 70px;
+    background-image: url(../images/jwu_hohenau_logo.png);
+    left: -70px;
+    top: 0;
+    position: absolute;
+}
+#logo.white:after{
+    opacity: 1;
+}
+#logo img{
+    left: -50%;
+    position: relative;
+    height: 70px;
+}
+
+@media screen and (max-width: 587px){
+#logo
+{
+    top: 5px;
+}
+    
+#logo img{
+    height: 70px;
+}
+    
+}
+/*Menu***/
+
+
+label input{
+    display: none;
+}
+
+label ul {
+ color: #000;  
+  height: 100%;
+  padding: 0;
+    margin :0;
+  position: fixed;
+  top: 0;      
+ width :0;
+    
+    
+}
+
+label ul.active-menu{
+    background: #0d88c5;
+     width: 100vw;
+}
+
+
+label input:checked + .menu .hamburger:before,label input:checked + .menu .hamburger:after {
+    background: #fff;
+}
+
+label input:checked + .menu .hamburger:before {
+    top:45px;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); 
+}
+
+label input:checked + .menu .hamburger:after {
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg); 
+}
+
+label .menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    height: 80px;
+    
+    cursor: pointer;
+}
+
+label .dark{
+    width: 100%;
+    background: rgba(13, 136, 197, 1);
+}
+
+label .hamburger {
+    position: relative;
+    top: 0;
+    left: 20px;
+    width: 30px;
+    height: 80px;
+    display: block;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    transition: .5s ease-in-out;
+     
+}
+
+label .hamburger:before,label .hamburger:after {
+    transition: .5s ease-in-out;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #0d88c5;
+}
+
+label .dark .hamburger:before,label .dark .hamburger:after{
+    background: #fff;
+}
+
+label .hamburger:before {
+    top: 35px;
+}
+
+label .hamburger:after {
+    top: 45px;
+}
+
+label #menu li {    
+  line-height: 18vh;
+    text-align: center;
+}
+
+label #menu li:first-child {    
+  margin-top:7vh; 
+}
+@media screen and (max-width: 992px){
+    label #menu li {    
+  line-height: 15vh;
+}
+       label #menu {    
+  padding-top: 60px;
+}
+}
+
+label #menu a {    
+  opacity: 0;
+  font-size: 3rem;
+  font-family: 'Ubuntu Condensed', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    line-height: 100%;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 768px){
+   label #menu a {    
+  font-size: 2rem;
+}
+    label .menu {
+    cursor: auto;
+}
+}
+
+label #menu.active-menu a {
+  opacity: 1;
+  transform: translate3d(0,0,0) scale(1);
+}
+
+label #menu.active-menu li:nth-child(1) a {
+  transition :  0.4s .1s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+}
+
+label #menu.active-menu li:nth-child(2) a {
+  transition :  0.4s .3s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+}
+
+label #menu.active-menu li:nth-child(3) a {
+  transition :  0.4s .5s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+}
+label #menu.active-menu li:nth-child(4) a {
+  transition :  0.4s .7s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+}
+label #menu.active-menu li:nth-child(5) a {
+  transition :  0.4s .9s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+}
+
+#page-canvas{
+  height: 100%;
+  position: relative;
+  width: 100%;
+  transform: translate3d(0,0,0);
+ -webkit-transform: translate3d(0,0,0);
+ /* transition: transform .2s;*/
+    display: block;
+}
+
+
+#page-canvas.active-menu {
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translate3d(100vw,0,0);
+  transition: transform .8s;
+  -webkit-transform: translate3d(100vw,0,0);
+    display: none;
+}
+
+
+section{
+    position: relative;
+    min-height:100vh;
+    width:100%;
+    background:#fff;
+    padding-top:60px;
+    color:#0d88c5;
+}
+
+#wir,#vorstandschaft,#presse{
+    background:#0d88c5;
+    color: #fff;
+}
+/*Kandidaten und Vorstandschaft Tabelle*/
+.kan-top{
+    background: #0d88c5;
+    color: #fff;
+}
+
+.kan-top span{
+   display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #0d88c5;
+    border-bottom: 4px;
+    border-right: none;
+    border-right: 2px solid #fff;
+    font-size: 1.5rem;
+}
+
+.kan-top .kan-name{
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    font-size: 1.5rem;
+}
+
+.kan-body{
+    color: #0d88c5;
+    font-size: 1.2rem;
+    padding-left: 10px;
+    border: 1px solid #0d88c5;
+    border-bottom: 4px solid;
+    border-top: 0;
+}
+@media screen and (max-width: 767px){
+    #kommunalwahl2020 .kan .l-box,#vorstandschaft .kan .l-box{
+        padding: 0 !important;
+    }
+}
+
+/*<<<<<<Kandidaten und Vorstandschaft Tabelle*/
+.kandidat{
+    position: relative;
+}
+
+.kandidat.no-kandidat .kandidat-content{
+    background: #0d88c5;
+    text-align: center;
+    height: 100%;
+}
+.kandidat.no-kandidat .kandidat-content a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.kandidat-content{
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    height: 100%;
+}
+
+.kandidat-content:hover .kandidat-info{
+    top:0;
+    -webkit-transition: all 0.4s ease-in-out;
+-moz-transition: all 0.7s ease-in-out;
+-ms-transition: all 0.7s ease-in-out;
+-o-transition: all 0.7s ease-in-out;
+transition: all 0.7s ease-in-out;
+}
+
+.kandidat img{
+    width:100%;
+}
+
+.kandidat-info{
+    position: absolute;
+    top:calc(100% - 2rem - 20px);
+    bottom:0;
+    right: 0;
+    left:0;
+    background: #0d88c5;
+    width: auto;
+    height: auto;
+    text-align: center;
+    color:#fff;
+    opacity: 1;
+    -webkit-transition: all 0.4s ease-in-out;
+-moz-transition: all 0.4s ease-in-out;
+-ms-transition: all 0.4s ease-in-out;
+-o-transition: all 0.4s ease-in-out;
+transition: all 0.4s ease-in-out;
+}
+
+#vorstandschaft .kandidat-info{
+    background:#fff ;
+    color:#0d88c5;
+}
+
+.kandidat-info-inner{
+    position: absolute;
+    width:100%;
+}
+
+.kandidat-content:hover .kandidat-info-inner{
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.listenplatz{
+    width: 160px;
+    height: 160px;
+    top: -80px;
+    right: calc(-80px + 1rem);
+    display: inline-block;
+    line-height: 220px;
+    font-size: 2rem;
+    position: absolute;
+    background: #0d88c5;
+    border-radius: 100px;
+    text-indent: 45px;
+    color: #fff;
+    z-index: 20;
+    -webkit-transition: all 0.4s ease-in-out;
+-moz-transition: all 0.4s ease-in-out;
+-ms-transition: all 0.4s ease-in-out;
+-o-transition: all 0.4s ease-in-out;
+transition: all 0.4s ease-in-out;
+
+}
+.kandidat-content:hover .listenplatz{
+    background: #78a939;
+    -webkit-transition: all 0.4s ease-in-out;
+-moz-transition: all 0.4s ease-in-out;
+-ms-transition: all 0.4s ease-in-out;
+-o-transition: all 0.4s ease-in-out;
+transition: all 0.4s ease-in-out;
+}
+
+.kandidat-content .no-kandidat{
+    text-align: center;
+    background: #0d88c5;
+    border:5px solid #0d88c5;
+    -webkit-transition: all 0.4s ease-in-out;
+-moz-transition: all 0.4s ease-in-out;
+-ms-transition: all 0.4s ease-in-out;
+-o-transition: all 0.4s ease-in-out;
+transition: all 0.4s ease-in-out;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.kandidat-content .no-kandidat a{
+    color:#fff;
+    text-decoration: none;
+}
+.kandidat-content .no-kandidat:hover{
+    background:#fff;
+    border:5px solid #0d88c5;
+}
+
+.kandidat-content .no-kandidat:hover a{
+    color:#0d88c5;
+}
+
+.kandidat-description-outer{
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+}
+.kandidat-description{
+    border: 5px solid;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.kandidat-description p{
+    top: 20%;
+    position: relative;
+}
+.meldung-item{
+    padding-bottom: 1rem;
+}
+
+.meldung-head{
+    max-height: 200px;
+    overflow: hidden;
+}
+.meldung-head img{
+    width: 100%;
+}
+
+.meldung-body{
+    padding:10px;
+    background: rgba(255,255,255,1)
+}
+
+.meldung-body:hover
+{
+    background: rgba(255,255,255,0.9);
+}
+
+.meldung-body a{
+    color:#0d88c5;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 0;
+    display: inline-block;
+    min-height: 132px;
+    width: 100%;
+}
+
+@media screen and (max-width: 1600px){
+.meldung-body a{
+    min-height: 100px;
+}
+}
+
+@media screen and (max-width: 992px){
+    
+#meldungen .l-box{
+        padding: 0 !important;
+}
+.meldung-body a{
+    min-height: auto;
+    overflow: hidden;
+}
+    .meldung-head{
+    max-height: 180px;
+}
+}
+
+#meinungen{
+    position: absolute;
+    left: 50vw;
+    top:50vh;
+    width: 1200px;
+    height: 250px;
+    margin-left: -600px;
+    margin-top:-125px
+}
+.meinung{
+    font-size: 7rem;
+    color:#0d88c5;
+    position: absolute;
+    opacity: 0;
+    text-align: center;
+    width: 100%;
+}
+
+@media screen and (max-width: 1200px){
+#meinungen{
+    width: 600px;
+    height: 200px;
+    margin-left: -300px;
+    margin-top:-100px
+}
+.meinung{
+    font-size: 4rem;
+    }
+}
+@media screen and (max-width: 587px){
+#meinungen{
+    width: 400px;
+    height: 200px;
+    margin-left: -200px;
+    margin-top:-100px
+}
+.meinung{
+    font-size: 3rem;
+    }
+.kandidat-description p{
+    top: 0;
+}
+}
+
+@media screen and (max-width: 400px){
+#meinungen{
+    width: 300px;
+    height: 200px;
+    margin-left: -150px;
+    margin-top:-100px
+}
+.meinung{
+    font-size: 3rem;
+    }
+}
+.meinung span{
+    color:#78a939;
+    text-transform: uppercase;
+}
+
+#meinung1{
+  animation-name:meinung-change;
+  animation-duration:16s;
+  animation-iteration-count:infinite;
+}
+
+#meinung2{
+  animation-name:meinung-change;
+  animation-duration:16s;
+  animation-iteration-count:infinite;
+  animation-delay:4s;
+}
+
+#meinung3{
+  animation-name:meinung-change;
+  animation-duration:16s;
+  animation-iteration-count:infinite;
+  animation-delay:8s;
+}
+#meinung4{
+  animation-name:meinung-change;
+  animation-duration:16s;
+  animation-iteration-count:infinite;
+  animation-delay:12s;
+}
+
+@keyframes meinung-change {
+  0%, 100% {
+    opacity: 0;
+  }
+
+    10%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0
+    }
+}
+
+a.start-link{
+    position: relative;
+    top: 80vh;
+    left: 50%;
+    display: block;
+    outline: 0;
+    width:0px;
+    height: 0px;
+     -webkit-transition: all 0.3s ease-out;
+-moz-transition: all 0.3s ease-out;
+-ms-transition: all 0.3s ease-out;
+-o-transition: all 0.3s ease-out;
+transition: all 0.3s ease-out;
+}
+
+a.start-link:before,a.start-link:after{
+    position: absolute;
+    background:#0d88c5;
+    display: block;
+    width: 10px;
+    content: '';
+    width: 2px;
+    height: 40px;
+}
+a.start-link:before{
+    left:-14px;
+    top:0;
+    -moz-transform: rotate(-45deg);
+-webkit-transform: rotate(-45deg);
+-o-transform: rotate(-45deg);
+-ms-transform: rotate(-45deg);
+transform: rotate(-45deg);
+}
+a.start-link:after{
+    left:14px;
+    top:0;
+    -moz-transform: rotate(45deg);
+-webkit-transform: rotate(45deg);
+-o-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+transform: rotate(45deg);
+}
+a.start-link:hover:after,a.start-link:hover:before{
+    background: #78a939;
+}
+@media screen and (max-width: 587px){
+    a.start-link{
+        top: 70vh;
+    }
+}
+
+#impressum p{
+    text-align: left;
+}
+#impressum p a{
+    color:#0d88c5;
+}
+#impressum h3{
+    text-align: left;
+    font-size: 2.5rem;
+}
+
+#presse p.slogan{
+font-family: 'Reenie Beanie', cursive ; 
+font-size:5rem;
+
+}
+
+#bm-kandidat{
+    position: fixed;
+    right:0;
+    bottom:0;
+    width:auto;
+    height:auto;
+    text-align: right;
+    vertical-align: baseline;
+    display: block;
+    line-height: 0;
+}
+
+#bm-kandidat img{
+    width: 150px
+}
+
+#bm-kandidat:after{
+    content: '';
+    position: absolute;
+    background-image: url('../images/bm/jwu_josef_gais_bubble.png');
+    background-size: 170px 127px;
+    opacity: 0;
+    width:170px;
+    height: 127px;
+    top:-55px;
+    left: -135px;
+    z-index: 20;
+    -webkit-transition: all 0.2s ease-in;
+-moz-transition: all 0.2s ease-in;
+-ms-transition: all 0.2s ease-in;
+-o-transition: all 0.2s ease-in;
+transition: all 0.2s ease-in;
+}
+
+
+#bm-kandidat:before{
+content: 'Website besuchen >> ';
+position: absolute;
+opacity: 1;
+bottom: 30px;
+right: 10px;
+z-index: 20;
+background:#fff;
+display: block;
+height: 30px;
+line-height: 30px;
+border-radius: 20px;
+padding: 0 5px;
+color:#0d88c5;
+border: 1px solid #0d88c5;
+   -webkit-transition: all 0.2s ease-in;
+-moz-transition: all 0.2s ease-in;
+-ms-transition: all 0.2s ease-in;
+-o-transition: all 0.2s ease-in;
+transition: all 0.2s ease-in;
+}
+#bm-kandidat:hover:after,#bm-kandidat:hover:before{
+    opacity: 1;
+}
+
+@media screen and (max-width: 1065px){
+    #bm-kandidat{
+        display: none;
+    }
+}
+
+footer{
+    background: #222;
+    width: 100%;
+    min-height: 60px;
+    border-top:5px solid #fff;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+}
+footer a{
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+}
+footer .links{
+    text-align: right;
+}
+footer .copyright{
+    text-align: left;
+    padding-left: 10px;
+}
+
+@media screen and (max-width: 767px){
+    footer .links,footer .copyright{
+    text-align: center;
+}
+    
+    footer{
+    line-height: 2rem;
+    }
+ 
+
+}
+
+@media screen and (max-width: 587px){
+    footer{
+    font-size: 1rem;
+}
+footer a{
+    font-size: 1rem;
+}
+    #presse p.slogan{
+font-size:3rem
+}  
+
+}
+
