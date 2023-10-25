@@ -90,9 +90,9 @@
 					<li class="pure-u-lg-1 pure-u-1">
                         <a href="./index.html#vorstandschaft" onclick='document.getElementById("naviswitcher").checked = false;handleChange(document.getElementById("naviswitcher"));'>Vorstandschaft</a>
 					</li>
-                    <li class="pure-u-lg-1 pure-u-1">
+                    <!--<li class="pure-u-lg-1 pure-u-1">
 						<a href="./index.html#presse" onclick='document.getElementById("naviswitcher").checked = false;handleChange(document.getElementById("naviswitcher"));'>Regionales</a>
-					</li>
+					</li>-->
 					<li class="pure-u-lg-1 pure-u-1"> 
 						<a href="https://www.facebook.com/hohenau.jwu/" target="_blank" onclick='document.getElementById("naviswitcher").checked = false;handleChange(document.getElementById("naviswitcher"));'>Facebook</a>
 					</li>
@@ -215,11 +215,17 @@ Die Erfassung dieser Daten erfolgt  auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO
 <footer>
 <div class="pure-g">
 <div class="pure-u-1 pure-u-md-1-2 links">
-    <a href="./impressum.html">Impressum</a> | <a href="#">Datenschutzerklärung</a></div><div class="pure-u-1 pure-u-md-1-2 copyright"><span>2019 &copy; JWU Hohenau-Schönbrunn a. L.</span></div></div>
+    <a href="./impressum.html">Impressum</a> | <a href="#">Datenschutzerklärung</a></div><div class="pure-u-1 pure-u-md-1-2 copyright">
+      <span id="copyright">
+            
+      </span></div></div>
 </footer>    
 
 
 </div>
-   
+<script>
+  const d = new Date();
+  document.getElementById("copyright").innerHTML=d.getFullYear() + " &copy; JWU Hohenau-Schönbrunn am Lusen"
+</script>
 </body>
 </html>
