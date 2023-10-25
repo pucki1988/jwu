@@ -768,15 +768,15 @@ Als Ideen- und Impulsgeber will man sich auch zukünftig mit neuen Meinungen ein
         <div class="pure-u-0 pure-u-md-1-8"></div>
     </div>    
 </section>
-<section id="presse">
+<section id="presse" style="min-height: auto !important;" >
  <div class="pure-g">
         <div class="pure-u-0 pure-u-md-1-8"></div>
         <div class="pure-u-1 pure-u-md-3-4 l-box">
             <!--<h3>Regionales</h3>
         <div id="meldungen">
             
-        </div>-->
-        <p style="text-align: right;font-size: 1rem;margin-top:0;" class="l-box">Meldungen aus der lokalen Tageszeitung</p>
+        </div>
+        <p style="text-align: right;font-size: 1rem;margin-top:0;" class="l-box">Meldungen aus der lokalen Tageszeitung</p>-->
         <p class="slogan">Politik mit einfachen Worten</p> 
         </div>
         <div class="pure-u-0 pure-u-md-1-8"></div>
@@ -790,11 +790,23 @@ Als Ideen- und Impulsgeber will man sich auch zukünftig mit neuen Meinungen ein
 <footer>
 <div class="pure-g">
 <div class="pure-u-1 pure-u-md-1-2 links">
-    <a href="./impressum.html">Impressum</a> | <a href="./datenschutz.html">Datenschutzerklärung</a></div><div class="pure-u-1 pure-u-md-1-2 copyright"><span>2019 &copy; JWU Hohenau-Schönbrunn am Lusen</span></div></div>
+
+
+    <a href="./impressum.html">Impressum</a> | <a href="./datenschutz.html">Datenschutzerklärung</a></div><div class="pure-u-1 pure-u-md-1-2 copyright">
+        <span id="copyright">
+            
+        </span>
+    
+    
+    </div></div>
 </footer>    
 
 
 </div>
 <!--<div id="bm-kandidat"><a href="https://josefgais.com" target="_blank"><img src="images/bm/jwu_josef_gais.png"/></a></div>-->
+<script>
+    const d = new Date();
+    document.getElementById("copyright").innerHTML=d.getFullYear() + " &copy; JWU Hohenau-Schönbrunn am Lusen"
+</script>
 </body>
 </html>
