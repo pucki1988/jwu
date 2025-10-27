@@ -74,52 +74,7 @@
     }
 </script>
     
-    <script>
-   /* $(document).ready(function() {
-	//feed to parse
-	var feed = "https://www.pnp.de/_export/rss/nachrichten/landkreis_freyung_grafenau/freyung/index.rss";
-	
-	$.ajax(feed, {
-		accepts:{
-			xml:"application/rss+xml"
-		},
-		dataType:"xml",
-		success:function(data) {
-			//Credit: http://stackoverflow.com/questions/10943544/how-to-parse-an-rss-feed-using-javascript
-            var anz=0;
-            var meldungen='<div class="pure-g">';
-			$(data).find("item").each(function () { // or "item" or whatever suits your feed
-				var el = $(this);
-                
-                if(anz<8)
-               {
-                meldungen= meldungen + '<div class="pure-u-1 pure-u-lg-1-2 pure-u-xl-1-4 l-box">'
-                /*meldungen= meldungen + '<div class="meldung-item"><div class="meldung-head"><img src="' +el.find("enclosure").attr("url") + '" /></div>';
-                
-                if(el.find("enclosure").attr("url")== null)
-                {
-                    meldungen= meldungen + '<div class="meldung-item"><div class="meldung-head" style="height:200px;background:#fff"></div>';
-                }
-                else
-                {
-                    meldungen= meldungen + '<div class="meldung-item"><div class="meldung-head"><img src="' +el.find("enclosure").attr("url") + '" /></div>';    
-                }
-                meldungen= meldungen + '<div class="meldung-body"><a href="' +el.find("link").text() + '" target="_blank">' +el.find("title").text() + '</a></div>';
-                meldungen= meldungen + '</div></div>';
-                }
-                
-                anz=anz+1;
-				
-			});
-	       meldungen= meldungen + '</div>';
-            $("#meldungen").html(meldungen);
-		}	
-	});
-	
-});*/
     
-    
-    </script>
     <!--<![endif]--></head>
 
 <body>
@@ -193,7 +148,7 @@ Als Ideen- und Impulsgeber will man sich auch zukünftig mit neuen Meinungen ein
         <div class="pure-u-0 pure-u-md-1-8"></div>
     </div>    
 </section>
-<section id="kommunalwahl2020">
+<!--<section id="kommunalwahl2020">
         <div class="pure-u-0 pure-u-md-1-8"></div>
         <div class="pure-u-1 pure-u-md-3-4">
             <h3>Kommunalwahl 2020</h3>
@@ -208,7 +163,7 @@ Als Ideen- und Impulsgeber will man sich auch zukünftig mit neuen Meinungen ein
             </div>
         </div>
         <div class="pure-u-0 pure-u-md-1-8"></div>
-</section>
+</section>-->
 <section id="mandat">
 <div class="pure-u-0 pure-u-md-1-8"></div>
         <div class="pure-u-1 pure-u-md-3-4">
@@ -291,139 +246,8 @@ Als Ideen- und Impulsgeber will man sich auch zukünftig mit neuen Meinungen ein
         <div class="pure-u-1 pure-u-md-3-4">
             <h3>Die Vorstandschaft</h3>
             
-             <div class="pure-g kandidaten">
-                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
-                    <div class="kandidat-content">
-                        <img src="images/wahl_2020/jwu_01_michael_haydn.jpg"/>
-                        
-                        <div class="kandidat-info">
-                            <div class="kandidat-info-inner">
-                            <h4>1.Vorstand</h4>
-                            <span>Michael Haydn</span>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
-                    <div class="kandidat-content">
-                        <img src="images/wahl_2020/jwu_12_johannes_pichler.jpg"/>
-                        
-                        <div class="kandidat-info">
-                            <div class="kandidat-info-inner">
-                            <h4>2.Vorstand</h4>
-                            <span>Johannes Pichler</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
-                    <div class="kandidat-content">
-                        <img src="images/wahl_2020/jwu_03_werner_wittmann.jpg"/>
-                       
-                        <div class="kandidat-info">
-                            <div class="kandidat-info-inner">
-                            <h4>Schatzmeister</h4>
-                            <span>Werner Wittmann</span>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
-                    <div class="kandidat-content">
-                        <img src="images/wahl_2020/jwu_05_julia_k%C3%BCblb%C3%B6ck.jpg"/>
-                        
-                        <div class="kandidat-info">
-                            <div class="kandidat-info-inner">
-                            <h4>Schriftführerin</h4>
-                            <span>Julia Küblböck</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
-                    <div class="kandidat-content">
-                        <img src="images/wahl_2020/jwu_04_christina_mayer.jpg"/>
-                        
-                        <div class="kandidat-info">
-                            <div class="kandidat-info-inner">
-                            <h4>Beisitzerin</h4>
-                            <span>Christina Mayer</span>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
-                    <div class="kandidat-content">
-                        <img src="images/wahl_2020/jwu_13_johannes_schmid.jpg"/>
-                        
-                        <div class="kandidat-info">
-                            <div class="kandidat-info-inner">
-                            <h4>Beisitzer</h4>
-                            <span>Johannes Schmid</span>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
-                    <div class="kandidat-content">
-                        <img src="images/wahl_2020/jwu_08_stefanie_kueblboeck.jpg"/>
-                        
-                        <div class="kandidat-info">
-                            <div class="kandidat-info-inner">
-                            <h4>Beisitzerin</h4>
-                            <span>Stefanie Küblböck</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
-                    <div class="kandidat-content">
-                        <img src="images/wahl_2020/jwu_02_alexander_thoma.jpg"/>
-                        
-                        <div class="kandidat-info">
-                            <div class="kandidat-info-inner">
-                            <h4>Beisitzer</h4>
-                            <span>Alexander Thoma</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
-                    <div class="kandidat-content">
-                        <img src="images/wahl_2020/jwu_00_dummy.jpg"/>
-                        
-                        <div class="kandidat-info">
-                            <div class="kandidat-info-inner">
-                            <h4>Beisitzer</h4>
-                            <span>Josef Gais</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                 <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
-                    <div class="kandidat-content">
-                        <img src="images/wahl_2020/jwu_00_dummy.jpg"/>
-                        
-                        <div class="kandidat-info">
-                            <div class="kandidat-info-inner">
-                            <h4>Beisitzer</h4>
-                            <span>Klaus Schuster</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                 <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
-                    <div class="kandidat-content">
-                        <img src="images/wahl_2020/jwu_00_dummy.jpg"/>
-                        
-                        <div class="kandidat-info">
-                            <div class="kandidat-info-inner">
-                            <h4>Beisitzer</h4>
-                            <span>Michael Mandl</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+             <div class="pure-g kandidaten" id="vorstand">
+                
             </div>
             
         </div>
