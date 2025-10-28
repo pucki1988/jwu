@@ -1,7 +1,7 @@
 {
   "siteTitle": "Junge Wählerunion Schönbrunn",
   "content": {
-    "showKandidaten": true,
+    "showKandidaten": false,
     "kandidatenCSV": "config/kandidaten.csv",
     "showVorstand": true,
     "vorstandCSV": "config/vorstand.csv"
