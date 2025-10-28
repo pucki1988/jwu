@@ -326,11 +326,14 @@ label #menu.active-menu li:nth-child(5) a {
 
 section{
     position: relative;
-    min-height:100vh;
     width:100%;
     background:#fff;
     padding-top:60px;
     color:#0d88c5;
+}
+
+section#start{
+    min-height: 100vh;
 }
 
 #wir,#vorstandschaft,#presse{

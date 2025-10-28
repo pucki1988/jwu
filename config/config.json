@@ -1,0 +1,16 @@
+{
+  "siteTitle": "Junge Wählerunion Schönbrunn",
+  "content": {
+    "showKandidaten": false,
+    "kandidatenCSV": "config/kandidaten.csv",
+    "showVorstand": true,
+    "vorstandCSV": "config/vorstand.csv"
+  },
+  "meinungen":[
+    "Politik <span>#Jünger</span> machen" ,
+    "<span>#Ideen</span> zusammen verwirklichen",
+    "Neue <span>#Meinungen</span> einbringen",
+    "<span>#Heimat</span> aktiv mitgestalten" 
+    ],
+  "footerText": "© 2025 Junge Wählerunion Schönbrunn am Lusen"
+}
