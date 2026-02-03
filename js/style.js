@@ -28,12 +28,12 @@ function initSite(config) {
 
     // Kandidaten laden, falls aktiviert
     if (config.content.showKandidaten) {
-        loadKandidaten(config.content.kandidatenCSV);
+        loadKandidaten(config.content.kandidatenCSV,config.content.kandidatenTitle,config.content.kandidatenImageBasePath);
     }
 
     // Vorstand laden, falls aktiviert
     if (config.content.showVorstand) {
-        loadVorstand(config.content.vorstandCSV);
+        loadVorstand(config.content.vorstandCSV,config.content.vorstandImageBasePath);
     }
 
     if (config.meinungen && Array.isArray(config.meinungen)) {
@@ -58,11 +58,11 @@ function parseCSV(csv, delimiter = ';') {
     });
 }
 
-function createHTMLRowCandidate(kandidat) {
+function createHTMLRowCandidate(kandidat, imageBasePath) {
     return `
     <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
         <div class="kandidat-content">
-            <img src="images/wahl_2020/${decodeURIComponent(kandidat.image)}" alt="${kandidat.name}"/>
+            <img src="${imageBasePath}${decodeURIComponent(kandidat.image)}" alt="${kandidat.name}"/>
             <span class="listenplatz">${kandidat.list_place}</span>
             <div class="kandidat-info">
                 <div class="kandidat-info-inner">
@@ -77,11 +77,11 @@ function createHTMLRowCandidate(kandidat) {
 }
 
 
-function createHTMLRowVorstand(vorstand) {
+function createHTMLRowVorstand(vorstand,imageBasePath) {
     return `
     <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-4 l-box kandidat pb-2">
         <div class="kandidat-content">
-            <img src="images/wahl_2020/${decodeURIComponent(vorstand.image)}" alt="${vorstand.name}"/>
+            <img src="${imageBasePath}${decodeURIComponent(vorstand.image)}" alt="${vorstand.name}"/>
             <div class="kandidat-info">
                 <div class="kandidat-info-inner">
                     <h4>${vorstand.position}</h4><br>
@@ -93,24 +93,24 @@ function createHTMLRowVorstand(vorstand) {
 }
 
 
-function loadKandidaten(csvPath) {
+function loadKandidaten(csvPath,title,imageBasePath) {
     fetch(csvPath)
         .then(res => res.text())
         .then(csvText => {
         const kandidaten = parseCSV(csvText);
-        document.getElementById('kandidaten').innerHTML = '<h3>Kommunalwahl 2020</h3><div class="pure-g kandidaten">' +
-            kandidaten.map(createHTMLRowCandidate).join('') + '</div><div class="pure-u-1 pure-u-sm-1 pure-u-lg-2-3 pure-u-xl-1 l-box kandidat pb-2"><div class="kandidat-content"><h4 class="no-kandidat"><a href="https://www.jwu-frg.de/" target="_blank">JWU Freyung Grafenau</a></h4></div></div>';
+        document.getElementById('kandidaten').innerHTML = '<h3>'+title+'</h3><div class="pure-g kandidaten">' +
+            kandidaten.map(k => createHTMLRowCandidate(k, imageBasePath)).join('') + '</div><div class="pure-u-1 pure-u-sm-1 pure-u-lg-2-3 pure-u-xl-1 l-box kandidat pb-2"><div class="kandidat-content"><h4 class="no-kandidat"><a href="https://www.jwu-frg.de/" target="_blank">JWU Freyung Grafenau</a></h4></div></div>';
         })
         .catch(err => console.error('Fehler beim Laden der Kandidaten:', err));
 }
 
-function loadVorstand(csvPath) {
+function loadVorstand(csvPath,imageBasePath) {
     fetch(csvPath)
         .then(res => res.text())
         .then(csvText => {
         const vorstandschaft = parseCSV(csvText);
         document.getElementById('vorstand').innerHTML = '<h3>Die Vorstandschaft</h3><div class="pure-g kandidaten">' +
-        vorstandschaft.map(createHTMLRowVorstand).join('') + '</div>';
+        vorstandschaft.map(v => createHTMLRowVorstand(v, imageBasePath)).join('') + '</div>';
         })
         .catch(err => console.error('Fehler beim Laden der Vorstandschaft', err));
 }
