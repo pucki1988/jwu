@@ -1,17 +1,17 @@
 ﻿list_place;name;job;year_of_birth;city;image
-1;Michael Haydn;Ltd. Angestellte;1989;Schönbrunn am Lusen;jwu_01_michael_haydn.jpg
-2;Alexander Thoma;Wirtschaftsfachwirt (IHK);1991;Eppenberg;jwu_02_alexander_thoma.jpg
-3;Werner Wittmann;Schreinermeister;1969;Kirchl;jwu_03_werner_wittmann.jpg
-4;Christina Mayer;Gesundheits- und Krankenpflegerin;1989;Hohenau;jwu_04_christina_mayer.jpg
-5;Julia Küblböck;Studentin (BWL/VWL);1997;Raimundsreut;jwu_05_julia_k%C3%BCblb%C3%B6ck.jpg
-6;Tobias Denk;Gesundheits- und Krankenpfleger;1998;Schönbrunnerhäuser;jwu_06_tobias_denk.jpg
-7;Stefan Wagner;Auszubildender;1995;Bierhütte;jwu_07_stefan_wagner.jpg
-8;Stefanie Küblböck;Gesundheits- und Krankenpflegerin;1990;Kirchl;jwu_08_stefanie_kueblboeck.jpg
-9;Simon Schmid;Industriemeister (Metall);1996;Hohenau;jwu_09_simon_schmid.jpg
-10;Alexander Schreiner;Monteur;1986;Schönbrunn am Lusen;jwu_10_alexander_schreiner.jpg
-11;Jan Melch;Maler- und Lackierermeister;1990;Saldenau;jwu_11_jan_melch.jpg
-12;Johannes Pichler;Maschinenbautechniker;1995;Raimundsreut;jwu_12_johannes_pichler.jpg
-13;Johannes Schmid;Industriemeister (Metall);1989;Eppenberg;jwu_13_johannes_schmid.jpg
-14;Stefan Duschl;Bankfachwirt;1993;Kirchl;jwu_14_stefan_duschl.jpg
-15;Florian Eiler;Industriemeister (Kunststoff- und Kautschuktechnik);1990;Saulorn;jwu_15_florian_eiler.jpg
-16;Bastian Poxleitner;Elektromeister;1990;Schönbrunnerhäuser;jwu_16_bastian_poxleitner.jpg
+1;Michael Haydn;Ltd. Angestellter;1989;Schönbrunn am Lusen;jwu_01_michael_haydn.jpg
+2;Alexander Thoma;Betriebswirt (IHK);1991;Eppenberg ;jwu_02_alexander_thoma.jpg
+3;Christina Mayer;Gesundheits- und Krankenpflegerin;1989;Hohenau;jwu_03_Christina_Mayer.jpg
+4;Bastian Poxleitner ;Elektromeister;1990;Schönbrunn am Lusen;jwu_04_Bastian_Poxleitner.jpg
+5;Sabrina Wittmann;Lehrerin;1998;Kirchl;jwu_05_Sabrina_Wittmann.jpg
+6;Florian Eiler;Kunststofftechnologe;1990;Saulorn;jwu_06_Florian_Eiler.jpg
+7;Anne Aufschläger;Studentin;2004;Hohenau ;jwu_07_Anne_Aufschlaeger.jpg
+8;Stefan Duschl;Bankfachwirt;1993;Kirchl;jwu_08_stefan_duschl.jpg
+9;Lea Hackl;Lehramtsstudentin;2002;Bierhütte;jwu_09_Lea_Hackl.jpg
+10;Johannes Schmid;Industriemeister (Metall);1989;Eppenberg ;jwu_10_Johannes_Schmid.jpg
+11;Stefanie Denk;Projektmitarbeiterin;1995;Kirchl;jwu_11_Stefanie_Denk.jpg
+12;Fabian Lendner;Industriefachwirt;1994;Saulorn ;jwu_12_Fabian_Lendner.jpg
+13;Johannes Pichler;Sales Manager;1995;Raimundsreut ;jwu_13_johannes_pichler.jpg
+14;Joachim Schwarz;Elektrotechniker;1987;Haag;jwu_14_Joachim_Schwarz.jpg
+15;Michael Denk;Finanzberater;1976;Schönbrunn am Lusen;jwu_15_Michael_Denk.jpg
+16;Christian Fisch;Qualitätsmanagementbeauftragter (QMB);1985;Saulorn;jwu_16_Christian_Fisch.jpg
