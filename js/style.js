@@ -99,7 +99,7 @@ function loadKandidaten(csvPath,title,imageBasePath) {
         .then(csvText => {
         const kandidaten = parseCSV(csvText);
         document.getElementById('kandidaten').innerHTML = '<h3>'+title+'</h3><div class="pure-g kandidaten">' +
-            kandidaten.map(k => createHTMLRowCandidate(k, imageBasePath)).join('') + '</div><div class="pure-u-1 pure-u-sm-1 pure-u-lg-2-3 pure-u-xl-1 l-box kandidat pb-2"><div class="kandidat-content"><h4 class="no-kandidat"><a href="https://www.jwu-frg.de/" target="_blank">JWU Freyung Grafenau</a></h4></div></div>';
+            kandidaten.map(k => createHTMLRowCandidate(k, imageBasePath)).join('') + '';
         })
         .catch(err => console.error('Fehler beim Laden der Kandidaten:', err));
 }
