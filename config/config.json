@@ -5,7 +5,7 @@
     "kandidatenTitle": "Kommunalwahl 2026",
     "kandidatenImageBasePath": "images/wahl_2026/",
     "kandidatenCSV": "config/kandidaten.csv",
-    "showVorstand": true,
+    "showVorstand": false,
     "vorstandCSV": "config/vorstand.csv",
     "vorstandImageBasePath": "images/wahl_2020/"
   },
