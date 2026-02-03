@@ -1,9 +1,9 @@
 {
   "siteTitle": "Junge Wählerunion Schönbrunn",
   "content": {
-    "showKandidaten": false,
+    "showKandidaten": true,
     "kandidatenTitle": "Kommunalwahl 2026",
-    "kandidatenImageBasePath": "images/wahl_2020/",
+    "kandidatenImageBasePath": "images/wahl_2026/",
     "kandidatenCSV": "config/kandidaten.csv",
     "showVorstand": true,
     "vorstandCSV": "config/vorstand.csv",
