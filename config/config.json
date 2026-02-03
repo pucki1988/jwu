@@ -7,7 +7,7 @@
     "kandidatenCSV": "config/kandidaten.csv",
     "showVorstand": true,
     "vorstandCSV": "config/vorstand.csv",
-    "vorstandImageBasePath": "images/wahl_2020/"
+    "vorstandImageBasePath": "images/wahl_2021/"
   },
   "meinungen":[
     "Politik <span>#Jünger</span> machen" ,
